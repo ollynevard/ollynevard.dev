@@ -1,0 +1,27 @@
+{
+  "name": "ollynevard.dev",
+  "version": "0.1.0",
+  "description": "The personal site of Olly Nevard",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "npm run develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ollynevard/ollynevard.dev.git"
+  },
+  "author": "Olly Nevard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ollynevard/ollynevard.dev/issues"
+  },
+  "homepage": "https://ollynevard.dev",
+  "dependencies": {
+    "gatsby": "^2.21.21",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
