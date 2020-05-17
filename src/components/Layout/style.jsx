@@ -16,8 +16,13 @@ export const GlobalStyles = () => {
         body {
           background-color: ${theme.colors.background};
           color: ${theme.colors.text};
+          font-family: ${theme.fonts.serif};
+          font-size: 20px;
+          font-variant-ligatures: discretionary-ligatures;
+          font-weight: 400;
           height: 100%;
           margin: 0;
+          -webkit-font-smoothing: antialiased;
         }
 
         #___gatsby,
@@ -36,7 +41,7 @@ export const LayoutContainer = styled.div`
 `;
 
 export const Main = styled.main`
-  height: 100%;
+  flex-grow: 1;
   margin: 0 auto;
   max-width: 960px;
   padding: 20px;
