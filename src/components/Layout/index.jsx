@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
+import { Helmet } from 'react-helmet';
 
 import theme from '../../theme';
 import Header from '../Header';
@@ -9,6 +10,9 @@ import { GlobalStyles, LayoutContainer, Main } from './style';
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
+    <Helmet>
+      <link rel="stylesheet" href="https://use.typekit.net/ugi8yzu.css" />
+    </Helmet>
     <LayoutContainer>
       <GlobalStyles />
       <Header />
