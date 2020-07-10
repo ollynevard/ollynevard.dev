@@ -26,7 +26,7 @@
     "emotion-theming": "^10.0.27",
     "gatsby": "^2.23.11",
     "gatsby-plugin-emotion": "^4.3.3",
-    "gatsby-plugin-react-helmet": "^3.3.4",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.11",
     "gatsby-transformer-remark": "^2.8.14",
     "prop-types": "^15.7.2",
