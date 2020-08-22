@@ -1,9 +1,10 @@
 import React from 'react';
 
+import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 
 export default () => (
   <Layout>
-    <h1>ollynevard.dev</h1>
+    <Hero />
   </Layout>
 );
