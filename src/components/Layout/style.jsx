@@ -8,14 +8,22 @@ export const GlobalStyles = () => {
   return (
     <Global
       styles={css`
+        * {
+          box-sizing: border-box;
+        }
+
+        ::selection {
+          background: ${theme.colors.blue};
+        }
+
         html {
           height: 100%;
         }
 
         body {
-          background-color: ${theme.colors.background};
-          color: ${theme.colors.text};
-          font-family: ${theme.fonts.serif};
+          background-color: ${theme.colors.grey1};
+          color: ${theme.colors.grey6};
+          font-family: ${theme.fonts.mono};
           font-size: 20px;
           font-variant-ligatures: discretionary-ligatures;
           font-weight: 400;
@@ -42,7 +50,7 @@ export const LayoutContainer = styled.div`
 export const Main = styled.main`
   flex-grow: 1;
   margin: 0 auto;
-  max-width: 960px;
-  padding: 20px;
+  max-width: 1200px;
+  padding: 40px;
   width: 100%;
 `;

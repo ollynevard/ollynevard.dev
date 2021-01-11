@@ -3,27 +3,37 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
-import theme from '../../theme';
-import Header from '../Header';
+import theme from 'theme';
 import Footer from '../Footer';
 import { GlobalStyles, LayoutContainer, Main } from './style';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, showHeader, showFooter }) => (
   <ThemeProvider theme={theme}>
     <Helmet>
-      <link rel="stylesheet" href="https://use.typekit.net/ugi8yzu.css" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+        rel="stylesheet"
+      />
     </Helmet>
     <LayoutContainer>
       <GlobalStyles />
-      <Header />
+      {showHeader}
       <Main>{children}</Main>
-      <Footer />
+      {showFooter && <Footer />}
     </LayoutContainer>
   </ThemeProvider>
 );
 
+Layout.defaultProps = {
+  showHeader: true,
+  showFooter: true,
+};
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  showHeader: PropTypes.bool,
+  showFooter: PropTypes.bool,
 };
 
 export default Layout;
