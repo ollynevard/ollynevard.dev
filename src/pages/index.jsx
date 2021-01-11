@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
+import { Layout, VCard } from 'components';
 
 export default () => (
-  <Layout>
-    <h1>ollynevard.dev</h1>
+  <Layout showHeader={false} showFooter={false}>
+    <VCard />
   </Layout>
 );
