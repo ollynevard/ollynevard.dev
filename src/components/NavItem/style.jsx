@@ -5,11 +5,15 @@ export const NavItemContainer = styled.li`
   font-size: 16px;
   font-weight: 600;
   list-style: none;
-  margin-right: 30px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 
-  &:last-child {
-    margin-right: 0;
+  @media (min-width: 576px) {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 `;
 
