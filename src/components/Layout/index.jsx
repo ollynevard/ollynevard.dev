@@ -12,6 +12,7 @@ const Layout = ({ children, showHeader, showFooter }) => (
   <ThemeProvider theme={theme}>
     <SEO />
     <Helmet>
+      <html lang="en-GB" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
