@@ -36,6 +36,36 @@ export const GlobalStyles = () => {
         #gatsby-focus-wrapper {
           height: 100%;
         }
+
+        @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 400;
+          src: url('/fonts/jetbrains-mono-v1-latin-regular.eot');
+          src: local(''),
+            url('/fonts/jetbrains-mono-v1-latin-regular.eot?#iefix')
+              format('embedded-opentype'),
+            url('/fonts/jetbrains-mono-v1-latin-regular.woff2') format('woff2'),
+            url('/fonts/jetbrains-mono-v1-latin-regular.woff') format('woff'),
+            url('/fonts/jetbrains-mono-v1-latin-regular.ttf') format('truetype'),
+            url('/fonts/jetbrains-mono-v1-latin-regular.svg#JetBrainsMono')
+              format('svg');
+        }
+
+        @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 600;
+          src: url('/fonts/jetbrains-mono-v1-latin-600.eot'); /* IE9 Compat Modes */
+          src: local(''),
+            url('/fonts/jetbrains-mono-v1-latin-600.eot?#iefix')
+              format('embedded-opentype'),
+            url('/fonts/jetbrains-mono-v1-latin-600.woff2') format('woff2'),
+            url('/fonts/jetbrains-mono-v1-latin-600.woff') format('woff'),
+            url('/fonts/jetbrains-mono-v1-latin-600.ttf') format('truetype'),
+            url('/fonts/jetbrains-mono-v1-latin-600.svg#JetBrainsMono')
+              format('svg');
+        }
       `}
     />
   );
