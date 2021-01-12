@@ -4,11 +4,13 @@ import { ThemeProvider } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
 import theme from 'theme';
+import SEO from '../SEO';
 import Footer from '../Footer';
 import { GlobalStyles, LayoutContainer, Main } from './style';
 
 const Layout = ({ children, showHeader, showFooter }) => (
   <ThemeProvider theme={theme}>
+    <SEO />
     <Helmet>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link

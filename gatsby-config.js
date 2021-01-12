@@ -1,4 +1,12 @@
 module.exports = {
+  siteMetadata: {
+    title: 'Olly Nevard | Software Engineer',
+    titleTemplate: '%s',
+    description: 'The personal site of Olly Nevard',
+    url: 'https://ollynevard.dev',
+    image: '/images/logo.png',
+    twitterUsername: '@ollynevard',
+  },
   plugins: [
     'gatsby-plugin-eslint',
     {
