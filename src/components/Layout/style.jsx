@@ -38,6 +38,7 @@ export const GlobalStyles = () => {
         }
 
         @font-face {
+          font-display: swap;
           font-family: 'JetBrains Mono';
           font-style: normal;
           font-weight: 400;
@@ -53,6 +54,7 @@ export const GlobalStyles = () => {
         }
 
         @font-face {
+          font-display: swap;
           font-family: 'JetBrains Mono';
           font-style: normal;
           font-weight: 600;
