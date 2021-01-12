@@ -5,20 +5,19 @@ export const VCardContainer = styled.div`
   display: flex;
   font-family: ${({ theme }) => theme.fonts.mono};
   height: 100%;
-  padding-bottom: 100px;
-
-  @media (min-width: 768px) {
-    padding-bottom: 50px;
-  }
+  padding-bottom: 50px;
 `;
 
 export const VCardInner = styled.div`
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 
-  @media (max-width: 768px) {
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 0;
   }
 `;
 
@@ -38,7 +37,7 @@ export const VCardMain = styled.div`
 
 export const VCardName = styled.h1`
   color: ${({ theme }) => theme.colors.pink};
-  font-size: 35px;
+  font-size: 42px;
   font-weight: 400;
   margin: 0;
   text-align: center;
@@ -51,9 +50,9 @@ export const VCardName = styled.h1`
 
 export const VCardRole = styled.h2`
   color: ${({ theme }) => theme.colors.grey5};
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   margin-top: 0;
   text-align: center;
 

@@ -2,13 +2,15 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 export const NavItemContainer = styled.li`
+  align-items: center;
   font-size: 16px;
   font-weight: 600;
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 
   @media (min-width: 576px) {
+    align-items: flex-start;
     margin-right: 30px;
 
     &:last-child {
