@@ -28,6 +28,15 @@ module.exports = {
         theme_color: '#FF6188',
         display: 'standalone',
         icon: 'static/images/icon.svg',
+        cache_busting_mode: 'none',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/icons/*'],
+        },
       },
     },
   ],
