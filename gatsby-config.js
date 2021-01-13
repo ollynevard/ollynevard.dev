@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: '%s',
     description: 'The personal site of Olly Nevard',
     url: 'https://ollynevard.dev',
-    image: '/images/logo.png',
+    image: '/images/logo_light_hex_maskable.png',
     twitterUsername: '@ollynevard',
   },
   plugins: [
@@ -27,7 +27,10 @@ module.exports = {
         background_color: '#2C292D',
         theme_color: '#FF6188',
         display: 'standalone',
-        icon: 'static/images/icon.svg',
+        icon: 'static/images/logo_light_hex_maskable.png',
+        icon_options: {
+          purpose: 'any maskable',
+        },
         cache_busting_mode: 'none',
       },
     },
