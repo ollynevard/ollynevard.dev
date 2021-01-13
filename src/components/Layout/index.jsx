@@ -13,12 +13,6 @@ const Layout = ({ children, showHeader, showFooter }) => (
     <SEO />
     <Helmet>
       <html lang="en-GB" />
-      <script
-        async
-        defer
-        data-domain="ollynevard.dev"
-        src="https://plausible.io/js/plausible.js"
-      />
     </Helmet>
     <LayoutContainer>
       <GlobalStyles />
