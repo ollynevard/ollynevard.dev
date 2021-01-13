@@ -25,6 +25,7 @@
     "@emotion/styled": "^11.0.0",
     "@reach/router": "^1.3.4",
     "gatsby": "^2.30.1",
+    "gatsby-plugin-manifest": "^2.10.0",
     "gatsby-plugin-react-helmet": "^3.8.0",
     "gatsby-source-filesystem": "^2.9.0",
     "gatsby-transformer-remark": "^2.14.0",
