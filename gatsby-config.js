@@ -10,13 +10,34 @@ module.exports = {
   plugins: [
     'gatsby-plugin-eslint',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `markdown-pages`,
+        name: 'markdown-pages',
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-transformer-remark',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Olly Nevard',
+        short_name: 'Olly Nevard',
+        start_url: '/',
+        background_color: '#2C292D',
+        theme_color: '#FF6188',
+        display: 'standalone',
+        icon: 'static/images/icon.svg',
+        cache_busting_mode: 'none',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/icons/*'],
+        },
+      },
+    },
   ],
 };
