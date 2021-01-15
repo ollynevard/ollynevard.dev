@@ -43,9 +43,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-plausible`,
+      resolve: 'gatsby-plugin-plausible',
       options: {
-        domain: `ollynevard.dev`,
+        domain: 'ollynevard.dev',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-posthog',
+      options: {
+        apiKey: 'DobtyiFpve4-wXr8MqqllJi2pJoD_Rj1E9CqTbcSJxk',
+        initOptions: {
+          persistence: 'memory',
+        },
       },
     },
   ],
