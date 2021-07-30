@@ -9,9 +9,16 @@ jobs:
     steps:
       - name: Checkout codebase
         uses: actions/checkout@v2
+      - name: Build events
+        uses: kvrhdn/gha-buildevents@v1
+        with:
+          apikey: ${{ secrets.HONEYCOMB_API_KEY}}
+          dataset: gha-build-events
+          job-status: ${{ job.status }}
       - name: Setup node
         uses: actions/setup-node@v1
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
       - name: Run linter
         run: npm run lint
+
