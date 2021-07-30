@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Build events
         uses: kvrhdn/gha-buildevents@v1
@@ -44,7 +44,7 @@ jobs:
 
   lighthouse:
     name: Lighthouse
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Build events
         uses: kvrhdn/gha-buildevents@v1
