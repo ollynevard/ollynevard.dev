@@ -15,29 +15,29 @@ jobs:
           job-status: ${{ job.status }}
 
       - run: |
-          echo ::set-env name=STEP_ID::0
-          echo ::set-env name=STEP_START::$(date +%s)
+          echo "STEP_ID=0" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Checkout codebase
         uses: actions/checkout@v2
       - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'checkout_codebase'
 
       - run: |
-          echo ::set-env name=STEP_ID::1
-          echo ::set-env name=STEP_START::$(date +%s)
+          echo "STEP_ID=1" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Setup node
         uses: actions/setup-node@v1
       - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'setup_node'
 
       - run: |
-          echo ::set-env name=STEP_ID::2
-          echo ::set-env name=STEP_START::$(date +%s)
+          echo "STEP_ID=2" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
       - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'install_dependencies'
 
       - run: |
-          echo ::set-env name=STEP_ID::3
-          echo ::set-env name=STEP_START::$(date +%s)
+          echo "STEP_ID=3" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Run linter
         run: buildevents cmd $TRACE_ID $STEP_ID lint -- npm run lint
       - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'run_linter'
