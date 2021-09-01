@@ -7,11 +7,38 @@ jobs:
     name: Lint
     runs-on: ubuntu-18.04
     steps:
+      - name: Build events
+        uses: kvrhdn/gha-buildevents@v1
+        with:
+          apikey: ${{ secrets.HONEYCOMB_API_KEY}}
+          dataset: gha-build-events
+          job-status: ${{ job.status }}
+
+      - run: |
+          echo "STEP_ID=0" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Checkout codebase
         uses: actions/checkout@v2
+      - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'checkout_codebase'
+
+      - run: |
+          echo "STEP_ID=1" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Setup node
         uses: actions/setup-node@v1
+      - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'setup_node'
+
+      - run: |
+          echo "STEP_ID=2" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+      - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'install_dependencies'
+
+      - run: |
+          echo "STEP_ID=3" >> $GITHUB_ENV
+          echo "STEP_START=$(date +%s)" >> $GITHUB_ENV
       - name: Run linter
-        run: npm run lint
+        run: buildevents cmd $TRACE_ID $STEP_ID lint -- npm run lint
+      - run: buildevents step $TRACE_ID $STEP_ID $STEP_START 'run_linter'
+
