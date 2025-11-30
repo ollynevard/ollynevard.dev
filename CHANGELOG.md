@@ -1,0 +1,11 @@
+# Changelog
+
+## 1.0.0 (2025-11-30)
+
+
+### Features
+
+* **req-001:** initial setup ([e0330a3](https://github.com/ollynevard/ollynevard.dev/commit/e0330a381fa5fe137253dc22c5a855d85f56e348))
+* **req-002:** code quality ([#1](https://github.com/ollynevard/ollynevard.dev/issues/1)) ([566d9bb](https://github.com/ollynevard/ollynevard.dev/commit/566d9bb458b6fe6730913f3876bafc1f0269e4ed))
+* **req-003:** commit messages ([#2](https://github.com/ollynevard/ollynevard.dev/issues/2)) ([a928785](https://github.com/ollynevard/ollynevard.dev/commit/a9287855952107ac3bfee02e1f2e7c94848aa9cf))
+* **req-004:** deployment pipeline ([#3](https://github.com/ollynevard/ollynevard.dev/issues/3)) ([ef5199e](https://github.com/ollynevard/ollynevard.dev/commit/ef5199e01a019888056f9a1ed983f3d48e57aac2))
