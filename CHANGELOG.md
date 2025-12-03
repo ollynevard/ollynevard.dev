@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.0.0...v1.1.0) (2025-12-03)
+
+
+### Features
+
+* **req-005:** unit testing ([#5](https://github.com/ollynevard/ollynevard.dev/issues/5)) ([b72fac5](https://github.com/ollynevard/ollynevard.dev/commit/b72fac50bb0f42fcceaaa0d81cc3d6b022deaeef))
+
 ## 1.0.0 (2025-11-30)
 
 
