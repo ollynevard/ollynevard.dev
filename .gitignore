@@ -26,3 +26,7 @@ pnpm-debug.log*
 # vitest 
 coverage/
 test-report.junit.xml
+
+# playwright
+playwright-report/
+test-results/
