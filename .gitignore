@@ -23,5 +23,6 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# vitest coverage
+# vitest 
 coverage/
+test-report.junit.xml
