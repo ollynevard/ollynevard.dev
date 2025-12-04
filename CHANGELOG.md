@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/ollynevard/ollynevard.dev/compare/v1.2.0...v1.2.1) (2025-12-04)
+
+
+### Bug Fixes
+
+* sentry release ([#11](https://github.com/ollynevard/ollynevard.dev/issues/11)) ([fcd0cdf](https://github.com/ollynevard/ollynevard.dev/commit/fcd0cdf3429792aa4dee58a2b539963f0d0b1669))
+
 ## [1.2.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.1.0...v1.2.0) (2025-12-04)
 
 
