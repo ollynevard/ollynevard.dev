@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.3.0...v1.4.0) (2025-12-04)
+
+
+### Features
+
+* add version to footer ([#15](https://github.com/ollynevard/ollynevard.dev/issues/15)) ([38c64e9](https://github.com/ollynevard/ollynevard.dev/commit/38c64e913778b38b5496e7164aee58184c040890))
+
 ## [1.3.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.2.1...v1.3.0) (2025-12-04)
 
 
