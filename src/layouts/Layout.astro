@@ -1,3 +1,7 @@
+---
+import { UMAMI_WEBSITE_ID } from 'astro:env/client';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,6 +10,15 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Olly Nevard</title>
+		{
+			UMAMI_WEBSITE_ID && (
+				<script
+					defer
+					src="https://cloud.umami.is/script.js"
+					data-website-id={UMAMI_WEBSITE_ID}
+				/>
+			)
+		}
 	</head>
 	<body>
 		<slot />
