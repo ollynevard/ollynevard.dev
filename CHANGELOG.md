@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.2.1...v1.3.0) (2025-12-04)
+
+
+### Features
+
+* **req-009:** analytics ([#13](https://github.com/ollynevard/ollynevard.dev/issues/13)) ([c2345a6](https://github.com/ollynevard/ollynevard.dev/commit/c2345a6d13f255f59481ee23caddf8279d987cf2))
+
 ## [1.2.1](https://github.com/ollynevard/ollynevard.dev/compare/v1.2.0...v1.2.1) (2025-12-04)
 
 
