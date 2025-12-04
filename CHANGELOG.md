@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.1.0...v1.2.0) (2025-12-04)
+
+
+### Features
+
+* **req-008:** error logging ([#9](https://github.com/ollynevard/ollynevard.dev/issues/9)) ([99086fb](https://github.com/ollynevard/ollynevard.dev/commit/99086fb389adb952a3141b086b77c4baa8d46d4e))
+
 ## [1.1.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.0.0...v1.1.0) (2025-12-03)
 
 
