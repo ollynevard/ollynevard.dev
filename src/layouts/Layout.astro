@@ -1,5 +1,6 @@
 ---
 import { UMAMI_WEBSITE_ID } from 'astro:env/client';
+import { version } from '../../package.json';
 ---
 
 <!doctype html>
@@ -22,6 +23,9 @@ import { UMAMI_WEBSITE_ID } from 'astro:env/client';
 	</head>
 	<body>
 		<slot />
+		<footer>
+			<p>v{version}</p>
+		</footer>
 	</body>
 </html>
 
