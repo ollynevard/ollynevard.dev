@@ -1,5 +1,10 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -35,7 +40,8 @@
       "linter": {
         "rules": {
           "correctness": {
-            "noUnusedImports": "off"
+            "noUnusedImports": "off",
+            "noUnusedVariables": "off"
           }
         }
       }

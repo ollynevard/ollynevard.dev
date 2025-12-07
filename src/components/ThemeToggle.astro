@@ -1,0 +1,52 @@
+---
+import MoonIcon from './icons/MoonIcon.astro';
+import SunIcon from './icons/SunIcon.astro';
+---
+
+<button
+    id="theme-toggle"
+    type="button"
+    class="ml-4 p-2 text-ctp-subtext0 hover:text-ctp-yellow transition-colors cursor-pointer"
+    aria-label="Toggle theme"
+>
+    <SunIcon class="hidden mocha:block" />
+    <MoonIcon class="block mocha:hidden" />
+</button>
+
+<script is:inline>
+    (() => {
+        function getTheme() {
+            const stored =
+                typeof localStorage !== "undefined" &&
+                localStorage.getItem("theme");
+            return (
+                stored ||
+                (window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light")
+            );
+        }
+
+        function applyTheme() {
+            getTheme() === "dark"
+                ? document.documentElement.classList.add("mocha")
+                : document.documentElement.classList.remove("mocha");
+        }
+
+        function toggleTheme() {
+            localStorage.theme = getTheme() === "dark" ? "light" : "dark";
+            applyTheme();
+        }
+
+        function initTheme() {
+            const toggleButton = document.getElementById("theme-toggle");
+            if (toggleButton) {
+                toggleButton.onclick = toggleTheme;
+            }
+            applyTheme();
+        }
+
+        document.addEventListener("astro:after-swap", initTheme);
+        initTheme();
+    })();
+</script>

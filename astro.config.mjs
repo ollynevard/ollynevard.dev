@@ -1,5 +1,5 @@
-// @ts-check
 import sentry from '@sentry/astro';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, envField } from 'astro/config';
 import { loadEnv } from 'vite';
 
@@ -24,4 +24,7 @@ export default defineConfig({
       },
     }),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

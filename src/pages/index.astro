@@ -1,7 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<h1>Hello World</h1>
-</Layout>
+<BaseLayout title="Home">
+	<div class="space-y-8">
+		<section class="space-y-4">
+			<h1 class="text-4xl font-bold text-ctp-mauve">Hello, World!</h1>
+			<p class="text-lg text-ctp-subtext0">
+				Hey 👋 I'm Olly. I'm an Engineering Lead from the UK.
+			</p>
+		</section>
+	</div>
+</BaseLayout>

@@ -1,0 +1,73 @@
+---
+import { UMAMI_WEBSITE_ID } from 'astro:env/client';
+import { ClientRouter } from 'astro:transitions';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Senior Software Engineer & Technical Lead' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title} | Olly Nevard</title>
+        <meta name="description" content={description} />
+        <ClientRouter />
+        <script is:inline>
+            const storedTheme =
+                typeof localStorage !== "undefined" &&
+                localStorage.getItem("theme");
+
+            const theme =
+                storedTheme ||
+                (window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light");
+
+            theme === "dark"
+                ? document.documentElement.classList.add("mocha")
+                : document.documentElement.classList.remove("mocha");
+        </script>
+
+        {
+            UMAMI_WEBSITE_ID && (
+                <script
+                    defer
+                    src="https://cloud.umami.is/script.js"
+                    data-website-id={UMAMI_WEBSITE_ID}
+                />
+            )
+        }
+    </head>
+    <body
+        class="flex min-h-screen flex-col bg-ctp-base text-ctp-text antialiased selection:bg-ctp-mauve selection:text-ctp-base"
+    >
+        <a
+            href="#main-content"
+            class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-ctp-mauve focus:text-ctp-base focus:rounded-md focus:font-bold"
+        >
+            Skip to content
+        </a>
+
+        <SiteHeader />
+
+        <main
+            id="main-content"
+            class="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
+        >
+            <slot />
+        </main>
+
+        <SiteFooter />
+    </body>
+</html>
