@@ -1,0 +1,44 @@
+---
+import { version } from '../../package.json';
+import GitHubIcon from './icons/GitHubIcon.astro';
+import LinkedInIcon from './icons/LinkedInIcon.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+    class="w-full border-t border-ctp-surface0 bg-ctp-mantle py-8 mt-auto transition-colors duration-200"
+>
+    <div
+        class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6 lg:px-8"
+    >
+        <div class="text-sm text-ctp-subtext0">
+            &copy; {currentYear} Olly Nevard. All rights reserved.
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a
+                href="https://github.com/ollynevard"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-ctp-subtext0 hover:text-ctp-text transition-colors"
+                aria-label="GitHub"
+            >
+                <GitHubIcon />
+            </a>
+            <a
+                href="https://linkedin.com/in/ollynevard"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-ctp-subtext0 hover:text-ctp-text transition-colors"
+                aria-label="LinkedIn"
+            >
+                <LinkedInIcon />
+            </a>
+        </div>
+
+        <div class="text-xs text-ctp-overlay0">
+            v{version}
+        </div>
+    </div>
+</footer>
