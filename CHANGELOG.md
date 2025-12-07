@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.4.0...v1.5.0) (2025-12-07)
+
+
+### Features
+
+* **req-010:** core layout and design system ([#17](https://github.com/ollynevard/ollynevard.dev/issues/17)) ([61b243b](https://github.com/ollynevard/ollynevard.dev/commit/61b243bc81a905bd9973f3cf24605c0819855613))
+
 ## [1.4.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.3.0...v1.4.0) (2025-12-04)
 
 
