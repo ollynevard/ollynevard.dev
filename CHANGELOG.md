@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/ollynevard/ollynevard.dev/compare/v1.5.0...v1.5.1) (2025-12-07)
+
+
+### Bug Fixes
+
+* viewport scale ([#19](https://github.com/ollynevard/ollynevard.dev/issues/19)) ([0b1a50c](https://github.com/ollynevard/ollynevard.dev/commit/0b1a50c5a1c388375c41b46d4388cb1a412ab796))
+
 ## [1.5.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.4.0...v1.5.0) (2025-12-07)
 
 
