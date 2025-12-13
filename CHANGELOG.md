@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.5.1...v1.6.0) (2025-12-13)
+
+
+### Features
+
+* add logo ([#21](https://github.com/ollynevard/ollynevard.dev/issues/21)) ([85a67de](https://github.com/ollynevard/ollynevard.dev/commit/85a67de6da52e5609e84a426f46f645e2afe91bf))
+
 ## [1.5.1](https://github.com/ollynevard/ollynevard.dev/compare/v1.5.0...v1.5.1) (2025-12-07)
 
 
