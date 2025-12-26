@@ -18,8 +18,8 @@ const { links } = Astro.props;
                 class:list={[
                     "inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium transition-colors duration-200",
                     link.isActive
-                        ? "border-ctp-mauve text-ctp-text"
-                        : "border-transparent text-ctp-subtext0 hover:border-ctp-surface1 hover:text-ctp-text",
+                        ? "border-primary text-foreground"
+                        : "border-transparent text-muted-foreground hover:border-border hover:text-accent-foreground",
                 ]}
                 aria-current={link.isActive ? "page" : undefined}
             >
