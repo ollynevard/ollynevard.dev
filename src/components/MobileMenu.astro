@@ -22,8 +22,8 @@ const { links } = Astro.props;
                 class:list={[
                     "block border-l-4 py-2 pl-3 pr-4 text-base font-medium transition-colors duration-200",
                     link.isActive
-                        ? "border-ctp-mauve bg-ctp-mauve/10 text-ctp-mauve"
-                        : "border-transparent text-ctp-subtext0 hover:border-ctp-surface1 hover:bg-ctp-surface0 hover:text-ctp-text",
+                        ? "border-primary bg-primary/10 text-primary"
+                        : "border-transparent text-muted-foreground hover:border-border hover:bg-accent hover:text-accent-foreground",
                 ]}
                 aria-current={link.isActive ? "page" : undefined}
             >
