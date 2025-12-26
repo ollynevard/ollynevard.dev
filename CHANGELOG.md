@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.6.0...v1.7.0) (2025-12-26)
+
+
+### Features
+
+* add favicon ([#25](https://github.com/ollynevard/ollynevard.dev/issues/25)) ([95aad56](https://github.com/ollynevard/ollynevard.dev/commit/95aad56d9e3f43807b7251bcf17ad1bee442291a))
+
 ## [1.6.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.5.1...v1.6.0) (2025-12-13)
 
 
