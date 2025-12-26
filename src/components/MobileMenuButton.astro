@@ -1,0 +1,50 @@
+<button
+    type="button"
+    id="mobile-menu-button"
+    aria-controls="mobile-menu"
+    aria-expanded="false"
+    class="relative inline-flex items-center justify-center p-2 text-ctp-subtext0 hover:text-ctp-mauve transition-colors cursor-pointer sm:hidden"
+>
+    <span class="absolute -inset-0.5"></span>
+    <span class="sr-only">Open main menu</span>
+    <svg
+        class="size-6 overflow-visible"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+    >
+        <path
+            class="origin-center transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] line-top"
+            d="M4 12H20"></path>
+        <path
+            class="origin-center transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] line-middle"
+            d="M4 12H20"></path>
+        <path
+            class="origin-center transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] line-bottom"
+            d="M4 12H20"></path>
+    </svg>
+</button>
+
+<style>
+    .line-top {
+        transform: translateY(-6px);
+    }
+    .line-bottom {
+        transform: translateY(6px);
+    }
+
+    :global(#mobile-menu-button[aria-expanded="true"]) .line-top {
+        transform: rotate(45deg);
+    }
+
+    :global(#mobile-menu-button[aria-expanded="true"]) .line-middle {
+        opacity: 0;
+    }
+
+    :global(#mobile-menu-button[aria-expanded="true"]) .line-bottom {
+        transform: rotate(-45deg);
+    }
+</style>

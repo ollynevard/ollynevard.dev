@@ -1,0 +1,34 @@
+---
+interface Props {
+  links: {
+    href: string;
+    label: string;
+    isActive: boolean;
+  }[];
+}
+
+const { links } = Astro.props;
+---
+
+<nav
+    id="mobile-menu"
+    class="hidden sm:hidden space-y-1 pb-4 pt-2"
+    aria-label="Mobile"
+>
+    {
+        links.map((link) => (
+            <a
+                href={link.href}
+                class:list={[
+                    "block border-l-4 py-2 pl-3 pr-4 text-base font-medium transition-colors duration-200",
+                    link.isActive
+                        ? "border-ctp-mauve bg-ctp-mauve/10 text-ctp-mauve"
+                        : "border-transparent text-ctp-subtext0 hover:border-ctp-surface1 hover:bg-ctp-surface0 hover:text-ctp-text",
+                ]}
+                aria-current={link.isActive ? "page" : undefined}
+            >
+                {link.label}
+            </a>
+        ))
+    }
+</nav>
