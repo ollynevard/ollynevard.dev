@@ -1,14 +1,99 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const phrases = [
+  'deleting code.',
+  'shipping on Fridays.',
+  'saying "it depends".',
+  'naming things.',
+  'writing YAML.',
+  'automating myself out of a job.',
+];
 ---
 
 <BaseLayout title="Home">
-	<div class="space-y-8">
-		<section class="space-y-4">
-			<h1 class="text-4xl font-bold text-primary">Hello, World!</h1>
-			<p class="text-lg text-muted-foreground">
-				Hey 👋 I'm Olly. I'm an Engineering Lead from the UK.
-			</p>
-		</section>
-	</div>
+	<section
+		class="flex flex-col justify-center min-h-[50vh] max-w-3xl mx-auto px-6 py-12"
+	>
+		<h1 class="text-4xl md:text-6xl font-bold leading-tight text-primary mb-6">
+			Hey 👋, I'm Olly.
+		</h1>
+		<p class="text-xl md:text-2xl text-foreground mb-8 text-balance">
+			Software Engineer & Tech Lead from the UK.
+		</p>
+		<div class="text-lg md:text-xl text-muted-foreground font-medium min-h-[3.5rem]">
+			<span class="sr-only">I spend my time building software.</span>
+			<span aria-hidden="true">
+				I spend my time
+				<span id="typewriter" class="text-secondary"></span>
+				<span
+					class="inline-block w-[3px] h-[1em] bg-secondary align-middle cursor"
+				></span>
+			</span>
+		</div>
+	</section>
 </BaseLayout>
+
+<script define:vars={{ phrases }}>
+	let typingTimeout;
+	
+	const runTypewriter = () => {
+		const typewriter = document.getElementById("typewriter");
+
+		if (!typewriter) return;
+
+		clearTimeout(typingTimeout);
+
+
+		let phraseIndex = 0;
+		let charIndex = 0;
+		let isDeleting = false;
+
+		const typeLoop = async () => {
+			if (!document.body.contains(typewriter)) return;
+
+			const currentPhrase = phrases[phraseIndex];
+			typewriter.textContent = currentPhrase.substring(0, charIndex);
+
+			// 1. Finished Typing? -> Pause then delete
+			if (!isDeleting && charIndex === currentPhrase.length) {
+				isDeleting = true;
+				typingTimeout = setTimeout(typeLoop, 2000);
+				return;
+			}
+
+			// 2. Finished Deleting? -> Pause then next phrase
+			if (isDeleting && charIndex === 0) {
+				isDeleting = false;
+				phraseIndex = (phraseIndex + 1) % phrases.length;
+				typingTimeout = setTimeout(typeLoop, 500);
+				return;
+			}
+
+			// 3. Normal Typing/Deleting
+			charIndex += isDeleting ? -1 : 1;
+			const speed = isDeleting ? 30 : 50 + Math.random() * 50;
+			typingTimeout = setTimeout(typeLoop, speed);
+		};
+
+		typeLoop();
+	};
+
+	document.addEventListener('astro:page-load', runTypewriter);
+</script>
+
+<style>
+	@keyframes blink {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+	}
+
+	.cursor {
+		animation: blink 1s step-end infinite;
+	}
+</style>
