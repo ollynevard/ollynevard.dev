@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.7.0...v1.8.0) (2025-12-27)
+
+
+### Features
+
+* home page hero ([#27](https://github.com/ollynevard/ollynevard.dev/issues/27)) ([db3b2ad](https://github.com/ollynevard/ollynevard.dev/commit/db3b2ad3a9ab9447eef9836c07f6b6883958b176))
+
 ## [1.7.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.6.0...v1.7.0) (2025-12-26)
 
 
