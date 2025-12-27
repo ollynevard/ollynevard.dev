@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/ollynevard/ollynevard.dev/compare/v1.8.0...v1.8.1) (2025-12-27)
+
+
+### Bug Fixes
+
+* min height ([#29](https://github.com/ollynevard/ollynevard.dev/issues/29)) ([e0c843b](https://github.com/ollynevard/ollynevard.dev/commit/e0c843b2d7823ab6222533c74c2dbb2b96437c99))
+
 ## [1.8.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.7.0...v1.8.0) (2025-12-27)
 
 
