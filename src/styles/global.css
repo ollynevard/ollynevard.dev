@@ -4,6 +4,8 @@
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/mocha.css";
 
+@plugin "@tailwindcss/typography";
+
 @custom-variant dark (&:where(.mocha, .mocha *));
 
 @theme {
