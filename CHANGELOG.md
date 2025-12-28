@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/ollynevard/ollynevard.dev/compare/v1.8.1...v1.9.0) (2025-12-28)
+
+
+### Features
+
+* about page ([#31](https://github.com/ollynevard/ollynevard.dev/issues/31)) ([4bbcb99](https://github.com/ollynevard/ollynevard.dev/commit/4bbcb99ac2ff5182e055db99ce8824fdaa05c459))
+
 ## [1.8.1](https://github.com/ollynevard/ollynevard.dev/compare/v1.8.0...v1.8.1) (2025-12-27)
 
 
